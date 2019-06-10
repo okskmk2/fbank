@@ -10,6 +10,7 @@
   justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1;
 }
 
 .App-link {
@@ -21,6 +22,10 @@
   text-align: center;
 }
 
+.topbar{
+  z-index:10;
+}
+
 .langStyle {
   display: flex;
   flex-direction: row;
@@ -30,7 +35,73 @@
   margin-left: auto;
   margin-right: 20px;
   margin-top: 0px;
+  height: 25px;
+  cursor: pointer;
 }
+
+.logStyle{
+  text-align: right;
+  margin-left: 20px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+.menuLoanKR {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown .menuLoanKR:hover .dropdownMenu {
+  display: block;
+}
+
+.menuDepositKR {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown .menuDepositKR:hover .dropdownMenu {
+  display: block;
+}
+
+.menuAccountKR {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown .menuAccountKR:hover .dropdownMenu {
+  display: block;
+}
+
+.menuTD {
+  border-bottom: 3px solid transparent;
+}
+
+.menuTD:hover {
+  border-bottom: 3px solid #53C8EC;
+}
+
+
+.dropdownMenu {
+  display: none;
+  background-color: rgba(255,255,255,0.3);
+  z-index: 1;
+  width: 100%;
+  height: 200px;
+  position: sticky;
+  top: 0;
+}
+
+.dropdown:hover .dropdownMenu{display:block;}
+
+.menu{display: none;}
 
 h1{
   font-size: calc(20px + 4vmin);
@@ -53,14 +124,16 @@ input{
   height: 20px;
   width: 300px;
   border:1px solid #eaeaea;
-  outline:none;
+  border-right: none;
+  outline: none;
+  font-size: 17px;
 }
 input:hover{
   border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
 }
-input:focus{
-  border-color:#4d90fe;
-}
+/*input:focus{*/
+/*  border-color:#4d90fe;*/
+/*}*/
 
 input[type="submit"] {
   border-radius: 2px;

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import adventure from './../pics/adventure.jpg'
 
-export class Landing extends Component {
+export class LandingKR extends Component {
     render() {
         return (
             <React.Fragment>
-                <img src={adventure} alt="adventure"/>
+                <div style={cropStyle}>
+                {/*<img style={iStyle} src={adventure} alt="adventure"/>*/}
+                </div>
             <div>
                 fbank 지금 개방 이벤트 진행합니다!<br/>
                 첫 100고객님께 에어팟 공짜로 드립니다!<br/>
@@ -16,4 +18,17 @@ export class Landing extends Component {
     }
 }
 
-export default Landing
+const cropStyle={
+    height: '4000px',
+    // overflow: 'hidden',
+    // position: 'absolute',
+    // top: '100px',
+    width: '100%',
+    backgroundImage: `url(${adventure})`,
+}
+const iStyle={
+    // marginTop: '-400px',
+    zIndex: '-99',
+}
+
+export default LandingKR

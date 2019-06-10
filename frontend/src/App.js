@@ -10,6 +10,7 @@ import AccountKR from './KR/LandingKR';
 import AccountEN from './EN/LandingEN';
 import DepositKR from './KR/LandingKR';
 import DepositEN from './EN/LandingEN';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props){
@@ -31,6 +32,9 @@ class App extends React.Component {
 
   render(){
     const lang=this.state.langKR ? 'EN' : 'KR';
+    const log= this.state.loggedin ? this.state.username
+        : this.state.langKR ? '로그인' : 'LOG IN';
+
     const bpage={ 
       'landingKR': <LandingKR />,
       'landingEN': <LandingEN />,
@@ -43,31 +47,51 @@ class App extends React.Component {
     }
     return (
       <React.Fragment>
+        <div className="App">
+          <div className="topbar">
+            <br/>
+            <table style={tStyle}>
+              <tr>
+                <td>
+                  <button className="logStyle">
+                    {log}
+                  </button>
 
-      <div className="App">
-        <br/>
-        <button className="langStyle" onClick={this.handleClick}>
-          {lang}
-        </button>
+                </td>
+                {/*<td>*/}
+                {/*  <button className="langStyle" onClick={this.handleClick}>*/}
+                {/*    {lang}*/}
+                {/*  </button>*/}
 
-        <header className="App-header">
-
-          {this.state.langKR ? <HeaderKR /> : <HeaderEN />}
-
-        </header>
-        
-      
-        <div className="bPage">
-          {bpage[this.state.bodypage]}
+                {/*</td>*/}
+              </tr>
+            </table>
         </div>
 
-      </div>
+          <header>
+
+            {this.state.langKR ? <HeaderKR /> : <HeaderEN />}
+
+          </header>
+
+        </div>
+
+        {/*<div className="bPage">*/}
+        {/*  {bpage[this.state.bodypage]}*/}
+        {/*</div>*/}
+
+
       
       </React.Fragment>
     );
   }
 
 
+}
+
+const tStyle={
+  width: '100%',
+  margin: 'auto',
 }
 
 export default App;
