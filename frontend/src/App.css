@@ -46,6 +46,8 @@
   font-size: 17px;
   font-weight: bold;
   cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 
@@ -111,7 +113,7 @@ h1{
 }
 
 button{
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   margin-bottom: 17px;
 }
 

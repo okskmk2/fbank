@@ -9,6 +9,7 @@ import DepositKR from '../KR/DepositKR';
 import DepositEN from '../EN/DepositEN';
 import { createPortal } from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import adventure from '../pics/adventure.jpg'
 
 export class HeaderKR extends Component {
     constructor(props){
