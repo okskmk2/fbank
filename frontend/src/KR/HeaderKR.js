@@ -19,8 +19,11 @@ export class HeaderKR extends Component {
           loggedin: false,
           username: '',
             scrolled: false,
+            showdrop: false,
         };
         this.handleClick=this.handleClick.bind(this);
+        this.handleMouseOver=this.handleMouseOver.bind(this);
+        this.handleMouseOut=this.handleMouseOut.bind(this);
     }
 
 
@@ -37,9 +40,13 @@ export class HeaderKR extends Component {
         // })
     }
 
+    handleMouseOver(){
+        this.setState({showdrop: true});
+    }
 
-
-
+    handleMouseOut(){
+        this.setState({showdrop: false});
+    }
 
     render() {
 
@@ -65,29 +72,56 @@ export class HeaderKR extends Component {
                         </table>
 
                         <div className='dropdown'>
-                        <table style={mStyle} cellSpacing="10px">
-                            <tr>
-                                <td className='menuTD'>
-                                    <Link to="/KR/loan" className="menuLoanKR">대출</Link>
-                                </td>
-                                <td className='menuTD'>
-                                    <Link to="/KR/deposit" className="menuDepositKR">예금</Link>
-                                </td>
-                                <td className='menuTD'>
-                                    <Link to="/KR/account" className="menuAccountKR">계정</Link>
-                                </td>
-                            </tr>
-                        </table>
-                        <table width='100%' className="dropdownMenu">
-                            <tr>
-                                <Link to="/KR/loan">대출</Link>
-                            </tr>
-                        </table>
+                        {/*<table style={mStyle} cellSpacing="10px"*/}
+                        {/*       // onMouseOver={this.handleMouseOver} onFocus={this.handleMouseOver}*/}
+                        {/*       //  onMouseOut={this.handleMouseOut} onBlur={this.handleMouseOut}*/}
+                        {/*     >*/}
+                        {/*    <tr>*/}
+                        {/*        <td className='menuTD'>*/}
+                        {/*            <Link to="/KR/loan" className="menuLoanKR">대출</Link>*/}
+                        {/*        </td>*/}
+                        {/*        <td className='menuTD'>*/}
+                        {/*            <Link to="/KR/deposit" className="menuDepositKR">예금</Link>*/}
+                        {/*        </td>*/}
+                        {/*        <td className='menuTD'>*/}
+                        {/*            <Link to="/KR/account" className="menuAccountKR">계정</Link>*/}
+                        {/*        </td>*/}
+                        {/*    </tr>*/}
+                        {/*</table>*/}
+                        {/*<table width='100%' className="dropdownMenu">*/}
+                        {/*    <tr>*/}
+                        {/*        <Link to="/KR/loan">대출</Link>*/}
+                        {/*    </tr>*/}
+                        {/*</table>*/}
+
+                        <ul>
+                            <li className="liDrop">
+                                <Link to="/KR/loan" className="menuLoanKR">대출</Link>
+                                <div className='dropContent'>
+                                    <Link to="/KR/deposit" className="menuDepositKR">DROP</Link>
+                                </div>
+                            </li>
+                            <li className="liDrop">
+                                <Link to="/KR/deposit" className="menuDepositKR">예금</Link>
+                                <div className='dropContent'>
+                                    <Link to="/KR/deposit" className="menuDepositKR">DROP</Link>
+                                </div>
+                            </li>
+                            <li className="liDrop">
+                                <Link to="/KR/account" className="menuAccountKR">계정</Link>
+                                <div className='dropContent'>
+                                    <Link to="/KR/deposit" className="menuDepositKR">DROP</Link>
+                                </div>
+                            </li>
+                        </ul>
+
                         </div>
                     </div>
+
                 </React.Fragment>
             )}/>
 
+            {/*{this.state.showdrop? <Dropdown /> : ''};*/}
 
 
             <Route exact path="/" component={LandingKR}/>
@@ -112,6 +146,7 @@ export class HeaderKR extends Component {
 
     }
 }
+
 
 const magStyle={
     height: '40px',

@@ -68,13 +68,15 @@ class App extends React.Component {
             </table>
         </div>
 
-          <header>
+          <header style={headStyle}>
 
             {this.state.langKR ? <HeaderKR /> : <HeaderEN />}
 
           </header>
 
         </div>
+
+        {/*<LandingKR />*/}
 
         {/*<div className="bPage">*/}
         {/*  {bpage[this.state.bodypage]}*/}
@@ -92,6 +94,11 @@ class App extends React.Component {
 const tStyle={
   width: '100%',
   margin: 'auto',
+}
+
+const headStyle={
+  // position: 'sticky',
+  // top: '0',
 }
 
 export default App;
