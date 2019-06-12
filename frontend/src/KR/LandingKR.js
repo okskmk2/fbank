@@ -3,11 +3,6 @@ import adventure from '../pics/adventure.jpg'
 
 export class LandingKR extends Component {
     render() {
-        // const fig=1+1;
-        // console.log("hello bu");
-        // console.log(fig);
-        // const imgheight=adventure.offsetHeight;
-        // console.log(imgheight);
         return (
             <React.Fragment>
                 <div style={cropStyle}>

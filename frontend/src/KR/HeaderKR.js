@@ -28,11 +28,7 @@ export class HeaderKR extends Component {
 
 
 
-    // handleClick(val){
-    //     this.setState({
-    //         bodypage: bpage.val,
-    //     })
-    // }
+
 
     handleClick(){
         // this.setState({
@@ -72,27 +68,7 @@ export class HeaderKR extends Component {
                         </table>
 
                         <div className='dropdown'>
-                        {/*<table style={mStyle} cellSpacing="10px"*/}
-                        {/*       // onMouseOver={this.handleMouseOver} onFocus={this.handleMouseOver}*/}
-                        {/*       //  onMouseOut={this.handleMouseOut} onBlur={this.handleMouseOut}*/}
-                        {/*     >*/}
-                        {/*    <tr>*/}
-                        {/*        <td className='menuTD'>*/}
-                        {/*            <Link to="/KR/loan" className="menuLoanKR">대출</Link>*/}
-                        {/*        </td>*/}
-                        {/*        <td className='menuTD'>*/}
-                        {/*            <Link to="/KR/deposit" className="menuDepositKR">예금</Link>*/}
-                        {/*        </td>*/}
-                        {/*        <td className='menuTD'>*/}
-                        {/*            <Link to="/KR/account" className="menuAccountKR">계정</Link>*/}
-                        {/*        </td>*/}
-                        {/*    </tr>*/}
-                        {/*</table>*/}
-                        {/*<table width='100%' className="dropdownMenu">*/}
-                        {/*    <tr>*/}
-                        {/*        <Link to="/KR/loan">대출</Link>*/}
-                        {/*    </tr>*/}
-                        {/*</table>*/}
+
 
                         <ul>
                             <li className="liDrop">
@@ -133,14 +109,7 @@ export class HeaderKR extends Component {
             <Route path="/KR/account" component={AccountKR}/>
             <Route path="/EN/account" component={AccountEN}/>
 
-            {/*<div>*/}
 
-
-
-            {/*    <div className="bPage">*/}
-            {/*        {bpage[this.state.bodypage]}*/}
-            {/*    </div>*/}
-            {/*</div>*/}
 
         </Router>)
 

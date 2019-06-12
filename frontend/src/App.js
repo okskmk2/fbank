@@ -76,11 +76,7 @@ class App extends React.Component {
 
         </div>
 
-        {/*<LandingKR />*/}
 
-        {/*<div className="bPage">*/}
-        {/*  {bpage[this.state.bodypage]}*/}
-        {/*</div>*/}
 
 
       
