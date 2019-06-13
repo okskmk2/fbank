@@ -121,11 +121,13 @@ const magStyle={
     height: '40px',
     width: '40px',
     border: 'none',
-    marginLeft: '-55px',
-    marginBottom: '16px',
+    marginLeft: '-57px',
+    marginBottom: '20px',
     fontSize: '17px',
     cursor: 'pointer',
-
+    background: 'rgba(255,255,255,0)',
+    color: 'white',
+    padding: '0',
 
 }
 

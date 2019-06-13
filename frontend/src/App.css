@@ -118,16 +118,20 @@ input{
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   height: 20px;
   width: 300px;
-  border:1px solid #eaeaea;
+  /*border:1px solid #eaeaea;*/
+    border: none;
   border-right: none;
   outline: none;
   font-size: 17px;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
 }
 input:hover{
-  border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+  /*border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;*/
+    background-color: rgba(255,255,255,0.12);
 }
 
 
