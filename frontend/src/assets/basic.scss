@@ -1,0 +1,34 @@
+$base-font-color:#222;
+body {
+    margin: 0;    
+    color: $base-font-color;
+    overflow-y: scroll;
+    font-family: Helvetica, sans-serif;
+    background-color: #F2F4F6;
+}
+
+header {
+    background-color: #282B31;
+    padding: 1rem 0;
+    color:white;
+}
+
+
+footer {
+    margin-top: 2rem;
+    padding:2rem;
+    background-color: #e2e2e2;
+    font-size: 24px;
+}
+
+button {
+    white-space: nowrap;
+}
+
+select{
+    padding:1px 3px;
+}
+
+h2{
+    margin-top: 0;
+}
