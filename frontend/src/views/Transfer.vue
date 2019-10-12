@@ -2,7 +2,7 @@
   en: 
     title: Transfer
   ko: 
-    title: 대출
+    title: 이체
 </i18n>
 
 <template>
